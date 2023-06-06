@@ -1,9 +1,7 @@
-import { v4 as uuidv4 } from 'uuid';
 
-
-export class APP_BuildingCurriculumStudent {
+export class BuildingCurriculumStudent {
     constructor(
-        public id: string=uuidv4(),
+        public buildingCurriculumStudentID: number=0,
         public tz: string="",
         public isPasport: boolean=false,
         public password: string="",

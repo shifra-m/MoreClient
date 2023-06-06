@@ -1,4 +1,4 @@
-export class APP_BuildingCurriculumTime {
+export class BuildingCurriculumTime {
     constructor(
         public buildingCurriculumID: number=0,
         public startTime: Date=new Date(),
