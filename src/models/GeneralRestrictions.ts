@@ -1,4 +1,4 @@
-export class GeneralRestrictionsModule {
+export class GeneralRestrictions {
   constructor(
     public GeneralRestrictionsID: number = 0,
     public schoolID: number = 0,

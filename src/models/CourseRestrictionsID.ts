@@ -1,4 +1,4 @@
-export class CourseRestrictionsIDModule {
+export class CourseRestrictionsID {
     constructor(
       public CourseRestrictionsID: number = 0,
       public Course1: number = 0,
