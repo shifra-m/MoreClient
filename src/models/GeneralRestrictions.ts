@@ -1,6 +1,6 @@
 export class GeneralRestrictions {
   constructor(
-    public GeneralRestrictionsID: number = 0,
+    public generalRestrictionsID: number = 0,
     public schoolID: number = 0,
     public minPrice: number = 0,
     public maxPrice: number = 0,
