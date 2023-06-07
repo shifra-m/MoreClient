@@ -1,12 +1,12 @@
 
 export class BuildingCurriculumStudent {
     constructor(
-        public buildingCurriculumStudentID: number=0,
-        public tz: string="",
-        public isPasport: boolean=false,
-        public password: string="",
-        public buildingCurriculumID: number=0,
-        public paymentID: number=0,
+        public buildingCurriculumStudentID: number | null = null,
+        public tz: string | null = null,
+        public isPasport: boolean | null = null,
+        public password: string | null = null,
+        public buildingCurriculumID: number | null = null,
+        public paymentID: number | null = null,
     ) {
 
     }

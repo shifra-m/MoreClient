@@ -31,10 +31,12 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { RippleModule } from 'primeng/ripple';
+import { ScheduleTableComponent } from './schedule-table/schedule-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ScheduleTableComponent
   ],
   imports: [
     BrowserModule,

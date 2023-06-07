@@ -1,0 +1,29 @@
+.schedule-table{
+    direction: rtl;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:65vw;
+    height: 55vh;
+    margin-top: 30vh;
+    margin-left: 23vw;
+    text-align: center;
+    table-layout: fixed; 
+    width: 60%;
+}
+th,tr,td{
+    border: 1px solid black;
+    font-size: 1.1vw;
+} 
+td .schedule-table{
+    width: 20%;
+    height: 15%;
+}
+.pink{
+    background-color: pink;
+}
+.lightblue{
+    background-color: rgb(214, 244, 244);
+}
+.lightgray{
+    background-color: rgb(244, 244, 244);
+}
