@@ -1,26 +1,11 @@
 <div class="table-responsive">
     <table class="schedule-table">
-        <thead>
-            <!-- <tr>
-                <th></th>
-                <th>ראשון</th>
-                <th>שני</th>
-                <th>שלישי</th>
-                <th>רביעי</th>
-                <th>חמישי</th>
-            </tr> -->
-        </thead>
         <tbody>
-            <tr *ngFor="let row of schedule;let i=index" >
-                <!-- <div class="example-button-row" *ngIf="isUser()"></div> -->
-                <!-- *ngIf="myString === 'example'" [ngStyle]="{'color': 'red'}" -->
-                <!-- [ngClass]="{'example-class': myString === 'example'}" -->
+            <tr *ngFor="let row of schedule;let i=index">
                 <td *ngFor="let cell of row; let j=index"
                     [ngClass]="{'pink': cell === 'יהדות חינוכית','lightblue': cell === 'השמעיני','lightgray':i === 0 && j !==0 }">
                     {{cell}}</td>
-    
             </tr>
         </tbody>
     </table>
-    </div>
-    
+</div>
