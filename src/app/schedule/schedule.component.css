@@ -1,0 +1,31 @@
+.all-the-table {
+    direction: rtl;
+    text-align: center;
+}
+.event {
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    text-align: center;
+    min-height: 1em;
+}
+.p-datatable .p-datatable-thead>tr>th {
+    text-align-last: center;
+}
+.selectWindow {
+    height: 18vh;
+    text-align: center;
+   
+}
+.prompt {
+    background-color: white;
+}
+
+td {
+    width: 8vw;
+    height: 5vh;
+    font-weight: bolder;
+}
+
+th {
+    font-weight:bolder;
+}

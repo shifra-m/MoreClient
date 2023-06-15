@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // PrimeNg
 import { AccordionModule } from 'primeng/accordion';
@@ -31,15 +31,19 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { RippleModule } from 'primeng/ripple';
-import { ScheduleTableComponent } from './schedule-table/schedule-table.component';
+import { FormsModule } from '@angular/forms';
+import { ScheduleComponent } from './schedule/schedule.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScheduleTableComponent
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SidebarModule,
     PasswordModule,
@@ -91,8 +95,11 @@ import { ScheduleTableComponent } from './schedule-table/schedule-table.componen
     MessagesModule,
     MessageModule,
     RippleModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
