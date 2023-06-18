@@ -12,7 +12,7 @@ export class ScheduleComponent {
       { name: 'תורה', code: 'tora', color: "gray" },
       { name: 'דינים', code: 'dinim', color: "pink" },
       { name: 'יהדות', code: 'yahdut', color: "red" },
-      { name: 'השמעיני', code: 'hasmieni', color: "yellow" },
+      { name: 'השמעיני', code: 'hashmieni', color: "yellow" },
       { name: 'אנגלית', code: 'english', color: "aqua" },
       { name: 'מתמטיקה', code: 'math', color: "lightblue" },
     ];
