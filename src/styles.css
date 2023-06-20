@@ -2,3 +2,18 @@
 body {
     font-family: var(--font-family);
 }
+
+.custom-icon .pi  {
+    color: black;
+    border: none!important;
+}
+
+.custom-icon {
+    background-color: transparent!important;
+    border: none!important;
+}
+
+.icon-button:focus {
+    outline: none;
+    box-shadow: none;
+  }

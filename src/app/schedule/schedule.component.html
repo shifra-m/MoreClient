@@ -13,12 +13,25 @@
         <ng-template pTemplate="body" let-row let-rowIndex="rowIndex">
             <tr>
                 <td *ngFor="let cell of row;let j=index" [style.background-color]="schedule[rowIndex][j].color">
-                    <div class="card flex justify-content-center">
+                    <div class="card flex justify-content-center my-container">
                         <p *ngIf="j===0" style="text-align: center;">{{cell}}</p>
                         <div class="event" *ngIf="j!==0" (click)="showDialog(rowIndex,j)"
-                            value="schedule[rowIndex][j].event">{{schedule[rowIndex][j].event}}
+                            value="schedule[rowIndex][j].event">
+                            <div class="trash">
+                                <p-button *ngIf="schedule[rowIndex][j].trash" styleClass="custom-icon"
+                                    icon="pi pi-trash" (click)="deleteEvent(rowIndex,j,$event)">
+                                </p-button>
+                            </div>
+                            <div class="edit">
+                                <p-button *ngIf="schedule[rowIndex][j].edit" styleClass="custom-icon"
+                                    icon="pi pi-file-edit" (click)="edit(rowIndex,j)">
+                                </p-button>
+                            </div>
                         </div>
-
+                        <div class="subject">
+                            {{schedule[rowIndex][j].event}}
+                        </div>
+                        <div *ngIf="schedule[rowIndex][j].event" [pTooltip]="tooltipText" class="tooltip"></div>
                     </div>
                 </td>
             </tr>
@@ -37,8 +50,6 @@
         </p-dropdown>
     </div>
     <ng-template pTemplate="footer">
-        <button pButton type="button" icon="header-icon pi pi-trash" (click)="deleteEvent()" class="trash"
-            style="width:3vw"></button>
         <p-button icon="pi pi-check" (click)="saveEvent()" label="Ok" styleClass="p-button-text"></p-button>
     </ng-template>
 </p-dialog>

@@ -28,28 +28,60 @@ export class ScheduleComponent {
     ["שעה אחרונה", new ScheduleEvent(31, ""), new ScheduleEvent(32, ""), new ScheduleEvent(33, ""), new ScheduleEvent(34, ""), new ScheduleEvent(35, "")]]
 
   lessons: any[] = [];
-  selectedLesson: any;
+  selectedLesson: any = null;
   visible: boolean = false;
   iIndex: number = 0;
   jIndex: number = 0;
   placeholderValue: string = "";
-  color: string="pink";
-  constructor() { }
+  color: string = "pink";
+  tooltipText: string = 'ש"ש,שעות,נ.ז,מחיר,מיקום,ציון מינמלי,שנתון,מתאריך,עד תאריך';
+  tooltipCondition: boolean = true;
+  constructor() {
+    console.log(this.selectedLesson)
+  }
   showDialog(i: number, j: number) {
+    console.log("hello show")
     console.log("i", "j", i, j)
+    console.log("visible", this.visible)
+    console.log("selected lesson", this.selectedLesson)
+    console.log("this.schedule[i][j]", this.schedule[i][j])
     this.iIndex = i;
     this.jIndex = j;
+    if (this.schedule[this.iIndex][this.jIndex].edit == true) {
+      this.visible = true;
+      return;
+    }
     this.visible = true;
   }
   saveEvent() {
+    console.log("hello save")
     this.visible = false;
+    console.log("i", "j", this.iIndex, this.jIndex);
+    console.log("schedule before", this.schedule[this.iIndex][this.jIndex])
+    console.log("lesson before", this.selectedLesson)
     this.schedule[this.iIndex][this.jIndex].event = this.selectedLesson.name;
-    this.schedule[this.iIndex][this.jIndex].color=this.selectedLesson.color;
-  }
-  deleteEvent() {
-    this.schedule[this.iIndex][this.jIndex].event = "";
-    this.schedule[this.iIndex][this.jIndex].color="white";
+    this.schedule[this.iIndex][this.jIndex].color = this.selectedLesson.color;
+    this.schedule[this.iIndex][this.jIndex].trash = true;
+    this.schedule[this.iIndex][this.jIndex].edit = true;
+    console.log("schedule after", this.schedule[this.iIndex][this.jIndex])
     this.selectedLesson = null;
+    console.log("lesson after", this.selectedLesson)
   }
-
+  deleteEvent(i: number, j: number, event: Event) {
+    console.log("hello delete")
+    this.iIndex = i;
+    this.jIndex = j;
+    event.stopPropagation();
+    this.schedule[this.iIndex][this.jIndex].event = "";
+    this.schedule[this.iIndex][this.jIndex].color = "white";
+    this.schedule[this.iIndex][this.jIndex].trash = false;
+    this.schedule[this.iIndex][this.jIndex].edit = false;
+  }
+  edit(i: number, j: number) {
+    console.log("hello edit");
+    this.visible = true;
+    this.iIndex = i;
+    this.jIndex = j;
+    this.schedule[this.iIndex][this.jIndex].edit = true;
+  }
 }
