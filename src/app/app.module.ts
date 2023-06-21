@@ -33,13 +33,15 @@ import { MessageModule } from 'primeng/message';
 import { RippleModule } from 'primeng/ripple';
 import { FormsModule } from '@angular/forms';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { ShowBuildingCurriculumCourseComponent } from './show-building-curriculum-course/show-building-curriculum-course.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    ShowBuildingCurriculumCourseComponent
   ],
   imports: [
     BrowserModule,
