@@ -3,15 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { BuildingCurriculumCourse } from 'src/models/BuildingCurriculumCourse';
 import { Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class BuildingCurriculumCourseService {
 
   constructor(public http:HttpClient) { }
-  routeUrl=`${environment.baseUrl}`;
-  getAllCourses(){
+  routeUrl=`${environment.baseUrl}/BuildingCurriculumCourse`;
+
+  getAllCourses():Observable<BuildingCurriculumCourse[]>{
     return this.http.get<BuildingCurriculumCourse[]>(this.routeUrl);
   }
 

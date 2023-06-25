@@ -35,6 +35,7 @@ import { FormsModule } from '@angular/forms';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ShowBuildingCurriculumCourseComponent } from './show-building-curriculum-course/show-building-curriculum-course.component';
 
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -97,7 +98,8 @@ import { ShowBuildingCurriculumCourseComponent } from './show-building-curriculu
     MessagesModule,
     MessageModule,
     RippleModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
