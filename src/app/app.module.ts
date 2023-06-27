@@ -31,10 +31,18 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { RippleModule } from 'primeng/ripple';
+import { FormsModule } from '@angular/forms';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ShowBuildingCurriculumCourseComponent } from './show-building-curriculum-course/show-building-curriculum-course.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ScheduleComponent,
+    ShowBuildingCurriculumCourseComponent
   ],
   imports: [
     BrowserModule,
@@ -90,8 +98,12 @@ import { RippleModule } from 'primeng/ripple';
     MessagesModule,
     MessageModule,
     RippleModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }

@@ -1,0 +1,63 @@
+.all-the-table {
+    direction: rtl;
+    text-align: center;
+}
+
+.my-container {
+    display: flex;
+    direction: ltr;
+}
+
+.event {
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    min-height: 1em;
+    margin-right: -2vw;
+    margin-top: -2vh;
+    margin-left: -1vw;
+    flex: 1;
+}
+
+.subject {
+    flex: 1;
+    height: 4vh;
+    margin-top: 2.6vh;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+    text-align-last: center;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+    text-align: left;
+}
+
+.selectWindow {
+    height: 18vh;
+    text-align: center;
+
+}
+
+.prompt {
+    background-color: white;
+}
+
+td {
+    width: 8vw;
+    height: 5vh;
+    font-weight: bolder;
+}
+
+th {
+    font-weight: bolder;
+}
+
+.edit,
+.trash {
+    width: 1vw;
+}
+.tooltip{
+    background-color: rgba(0, 0, 0, 0);
+    width: 0.5vw;
+
+}

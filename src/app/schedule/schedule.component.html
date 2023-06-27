@@ -1,0 +1,55 @@
+<div class="card all-the-table">
+    <p-table styleClass="p-datatable-gridlines" [value]="schedule" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr style="text-align-last:center">
+                <th></th>
+                <th>ראשון</th>
+                <th>שני</th>
+                <th>שלישי</th>
+                <th>רביעי</th>
+                <th>חמישי</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-row let-rowIndex="rowIndex">
+            <tr>
+                <td *ngFor="let cell of row;let j=index" [style.background-color]="schedule[rowIndex][j].color">
+                    <div class="card flex justify-content-center my-container">
+                        <p *ngIf="j===0" style="text-align: center;">{{cell}}</p>
+                        <div class="event" *ngIf="j!==0" (click)="showDialog(rowIndex,j)"
+                            value="schedule[rowIndex][j].event">
+                            <div class="trash">
+                                <p-button *ngIf="schedule[rowIndex][j].trash" styleClass="custom-icon"
+                                    icon="pi pi-trash" (click)="deleteEvent(rowIndex,j,$event)">
+                                </p-button>
+                            </div>
+                            <div class="edit">
+                                <p-button *ngIf="schedule[rowIndex][j].edit" styleClass="custom-icon"
+                                    icon="pi pi-file-edit" (click)="edit(rowIndex,j)">
+                                </p-button>
+                            </div>
+                        </div>
+                        <div class="subject">
+                            {{schedule[rowIndex][j].event}}
+                        </div>
+                        <div *ngIf="schedule[rowIndex][j].event" [pTooltip]="tooltipText" class="tooltip"></div>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<p-dialog header="קבע ארוע" [(visible)]="visible" [style]="{ width: '50vw' }" class="prompt">
+    <div class="card flex justify-content-center selectWindow">
+        <p-dropdown appendTo="body" [style]="{width: '30%'}" [options]="lessons" [(ngModel)]="selectedLesson"
+            optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" placeholder="בחר שיעור" dir="rtl">
+            <ng-template pTemplate="selectedItem">
+                <div class="flex align-items-center gap-2" *ngIf="selectedLesson">
+                    <div style="vertical-align:right">{{selectedLesson.name}}</div>
+                </div>
+            </ng-template>
+        </p-dropdown>
+    </div>
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="saveEvent()" label="Ok" styleClass="p-button-text"></p-button>
+    </ng-template>
+</p-dialog>
