@@ -19,11 +19,11 @@ export class BuildingCurriculumCourseService {
   // }
 
 
-  getAllCourses(){
+  getAllBuildingCurriculumCourses(){
     return this.http.get<BuildingCurriculumCourse[]>(this.routeUrl);
   }
 
-  getCourseById(id: number) {
+  getBuildingCurriculumCourseById(id: number) {
     return this.http.get<BuildingCurriculumCourse>(`${this.routeUrl}/${id}`);
   }
 

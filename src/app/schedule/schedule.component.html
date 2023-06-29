@@ -40,13 +40,8 @@
 </div>
 <p-dialog header="קבע ארוע" [(visible)]="visible" [style]="{ width: '50vw' }" class="prompt">
     <div class="card flex justify-content-center selectWindow">
-        <p-dropdown appendTo="body" [style]="{width: '30%'}" [options]="lessons" [(ngModel)]="selectedLesson"
-            optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" placeholder="בחר שיעור" dir="rtl">
-            <ng-template pTemplate="selectedItem">
-                <div class="flex align-items-center gap-2" *ngIf="selectedLesson">
-                    <div style="vertical-align:right">{{selectedLesson.name}}</div>
-                </div>
-            </ng-template>
+        <p-dropdown appendTo="body" [style]="{width: '30%'}" [options]="options" [(ngModel)]="selectedCourse.name" 
+            [filter]="true" filterBy="name" [showClear]="true" placeholder="בחר שיעור" dir="rtl">
         </p-dropdown>
     </div>
     <ng-template pTemplate="footer">
