@@ -56,8 +56,15 @@ th {
 .trash {
     width: 1vw;
 }
-.tooltip{
+
+.tooltip {
     background-color: rgba(0, 0, 0, 0);
     width: 0.5vw;
 
+}
+
+.disabled-option {
+    color: gray;
+    cursor: not-allowed;
+    pointer-events:none;
 }
