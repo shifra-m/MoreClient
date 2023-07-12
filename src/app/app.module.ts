@@ -37,12 +37,15 @@ import { ShowBuildingCurriculumCourseComponent } from './show-building-curriculu
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScheduleComponent,
-    ShowBuildingCurriculumCourseComponent
+    ShowBuildingCurriculumCourseComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,9 +103,12 @@ import { HttpClientModule } from '@angular/common/http';
     RippleModule,
     FormsModule,
     HttpClientModule,
+    FullCalendarModule ,
   ],
+
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 
 
