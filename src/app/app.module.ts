@@ -31,14 +31,15 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { RippleModule } from 'primeng/ripple';
-import { FormsModule } from '@angular/forms';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ShowBuildingCurriculumCourseComponent } from './show-building-curriculum-course/show-building-curriculum-course.component';
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarComponent } from './calendar/calendar.component';
+import { NedarimComponent } from './nedarim/nedarim.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -46,8 +47,11 @@ import { CalendarComponent } from './calendar/calendar.component';
     ScheduleComponent,
     ShowBuildingCurriculumCourseComponent,
     CalendarComponent,
+    NedarimComponent,
   ],
   imports: [
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -104,6 +108,8 @@ import { CalendarComponent } from './calendar/calendar.component';
     FormsModule,
     HttpClientModule,
     FullCalendarModule ,
+    BrowserModule,
+    FormsModule,
   ],
 
   providers: [],

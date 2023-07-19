@@ -1,0 +1,63 @@
+
+ <!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+<head style="margin-top:87px;">
+
+  <meta name="viewport"
+
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
+
+  <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Alef" />
+
+  <title></title>
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+
+
+  <ng-template #longContent let-modal style="height: 100%;">
+
+    <div class="modal-header">
+
+      <h4 class="modal-title">תשלום מנוי</h4>
+
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+
+    </div>
+
+    <div class="modal-body">
+
+      <iframe style="height: 100%; width: 100%;"
+
+        src="https://www.matara.pro/nedarimplus/online/?mosad=7005642&&Amount=52" title="נדרים פלוס"></iframe>
+
+    </div>
+
+    <div class="modal-footer">
+
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+
+    </div>
+
+  </ng-template>
+
+  
+
+  <!-- <div #formContainer></div>  -->
+
+  <iframe style="height: 680px ; width:1470px;" src="https://www.matara.pro/nedarimplus/online/?mosad=7005642&&Amount=52"></iframe>
