@@ -1,5 +1,4 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -42,9 +41,9 @@
 
     <div class="modal-body">
 
-      <iframe style="height: 100%; width: 100%;"
+     <!-- <iframe style="height: 100%; width: 100%;"
 
-        src="https://www.matara.pro/nedarimplus/online/?mosad=7005642&&Amount=52" title="נדרים פלוס"></iframe>
+       [src]="getIframeUrl()"; title="נדרים פלוס"></iframe>  -->
 
     </div>
 
@@ -56,8 +55,14 @@
 
   </ng-template>
 
-  
+ 
 
-  <!-- <div #formContainer></div>  -->
+  <div #formContainer></div>  
 
-  <iframe style="height: 680px ; width:1470px;" src="https://www.matara.pro/nedarimplus/online/?mosad=7005642&&Amount=52"></iframe>
+  <!-- <iframe style="height: 680px ; width:1470px;" src="https://www.matara.pro/nedarimplus/online/?mosad=7009223"></iframe>  -->
+
+ <!-- <iframe style="height: 680px;height: 1470px;" [src]="getIframeUrl()"></iframe>  -->
+
+    <iframe style="height: 680px;width: 1470px;"[src]="src | safe "></iframe>
+
+

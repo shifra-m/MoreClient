@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild,OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -7,8 +7,12 @@ import { HttpClient } from '@angular/common/http';
 // import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { ActivatedRoute, Router } from '@angular/router';
+import { SafePipe } from '../safe.pipe';
+
 
 // import '../assets/sweetalert.css';
+
+
 
 
 @Component({
@@ -16,30 +20,14 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './nedarim.component.html',
   styleUrls: ['./nedarim.component.css'],
 })
-export class NedarimComponent implements AfterViewInit {
+export class NedarimComponent  {
 
-  @ViewChild('formContainer')
+   mosadCode: string = '7005642';
 
-  formContainer!: ElementRef;
+  // mosadCode: string = '7009223';
 
+  src= `https://www.matara.pro/nedarimplus/online/?mosad=${this.mosadCode}`;
 
-
-
-  constructor(private http: HttpClient) {}
-
-
-
-
-  ngAfterViewInit() {
-
-    this.http.post('https://www.matara.pro/nedarimplus/online/?mosad=7005642&&Amount=52', { responseType: 'text' })
-
-      .subscribe(data => {
-
-        this.formContainer.nativeElement.innerHTML = data;
-
-      });
-
-  }
+ 
 
 }

@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: "schedule", component: ScheduleComponent },
   { path: "calendar", component: CalendarComponent },
   { path: "nedarim", component: NedarimComponent },
+
 ];
 
 @NgModule({

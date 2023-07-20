@@ -38,6 +38,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarComponent } from './calendar/calendar.component';
 import { NedarimComponent } from './nedarim/nedarim.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SafePipe } from './safe.pipe';
 // import { HttpClientModule } from '@angular/common/http';
 
 
@@ -48,6 +49,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShowBuildingCurriculumCourseComponent,
     CalendarComponent,
     NedarimComponent,
+    SafePipe
   ],
   imports: [
     ReactiveFormsModule,
